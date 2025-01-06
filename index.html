@@ -1,0 +1,24 @@
+// HTML (index.html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisper Web App</title>
+</head>
+<body>
+    <h1>Whisper API Web App</h1>
+    <button id="startButton">Start Recording</button>
+    <button id="stopButton">Stop Recording</button>
+    <button id="debugButton">Debug</button>
+    <p id="transcript"></p>
+
+    <script type="module">
+        import { startRecording, stopRecording, runDebug } from './app.js';
+
+        document.getElementById('startButton').addEventListener('click', startRecording);
+        document.getElementById('stopButton').addEventListener('click', stopRecording);
+        document.getElementById('debugButton').addEventListener('click', runDebug);
+    </script>
+</body>
+</html>
